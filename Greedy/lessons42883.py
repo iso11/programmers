@@ -4,11 +4,12 @@ def solution(number, k):
     # 들어있는게 작으면 빼기
     # n = list(number) #string list를 int list로
 
-    for i in number:
-        while answer and answer[-1] < i and k > 0:
+    while number:
+        while answer and answer[-1] < number[0] and k > 0:
             answer = answer[:-1]
             k -= 1
-        answer += i
+        answer += number[0]
+        number = number[1:]
         
     if k > 0:
         answer = answer[:-k]
