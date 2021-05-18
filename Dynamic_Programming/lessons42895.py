@@ -20,3 +20,5 @@ def solution(N, number):
             break
 
     return answer
+
+print(solution(5,12))

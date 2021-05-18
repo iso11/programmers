@@ -12,3 +12,5 @@ def solution(m, n, puddles):
                 p_map[i][j] += (p_map[i-1][j] + p_map[i][j-1])
 
     return p_map[n][m] % 1000000007
+
+print(solution(4, 3, [[2,2]]))
